@@ -1,38 +1,39 @@
-import { GoogleLogin } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
-import { useState } from "react";
+import { IoChatbubblesSharp } from "react-icons/io5";
 
 const App = () => {
- const [email, setMail] = useState("");
- const [password, setPassword] = useState("");
-
- let handlerSubmitBtn =(e)=>{
-  e.preventDefault();
-  console.log("Email: ",email);
-  console.log("Password: ", password);
- }
-
   return (
     <>
-     <div className="background bg-black text-white w-full h-screen p-5 flex justify-center ">
-        <div className="absolute top-[-310px] loginBox blur-3xl bg-[#11ff0086] rounded-full w-1/4 h-1/2"></div>
-        <form onSubmit={handlerSubmitBtn} className="fields flex flex-col justify-center items-center gap-2">
-          <input required minLength={4} className="bg-zinc-900 outline-none rounded border-2 border-zinc-700 p-2 w-full text-white" placeholder="name" type="text" />
-          <input required value={email} onChange={(e)=> setMail(e.target.value)} className="bg-zinc-900 outline-none rounded border-2 border-zinc-700 p-2 w-full text-white" placeholder="email" type="email" />
-          <input required minLength={8} value={password} onChange={(e)=> setPassword(e.target.value)} className="bg-zinc-900 outline-none rounded border-2 border-zinc-700 p-2 w-full text-white" placeholder="password" type="password" />
-          <input className="bg-[#11ff0086] w-full outline-none rounded p-2 text-white cursor-pointer" type="submit" />
-        <h5 className="">OR</h5>
-      <GoogleLogin onSuccess={(credentialResponse) => {
-          console.log(jwtDecode(credentialResponse.credential));
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-        />    
-        </form>
+      <div className="app w-full h-screen bg-zinc-700 text-white flex justify-between p-5">
+        <div className="sidebar flex flex-col justify-between items-center border-2 w-1/15 h-full rounded p-2">
+          <div className="top flex flex-col gap-2">
+            <h5 className="cursor-pointer border-2 p-2 rounded text-center">
+              Chat
+            </h5>
+            <h5 className="cursor-pointer border-2 p-2 rounded text-center">
+              Status
+            </h5>
+            <h5 className="cursor-pointer border-2 p-2 rounded text-center">
+              Calls
+            </h5>
+          </div>
+          <div className="bottom flex flex-col gap-5">
+            <h5 className="cursor-pointer border-2 p-2 rounded text-center">
+              Settings
+            </h5>
+            <h5 className="cursor-pointer border-2 p-2 rounded text-center">
+              Profile
+            </h5>
+          </div>
+        </div>
+        <div className="Chats w-1/4 h-full bg-zinc-800 rounded border-2"></div>
+        <div className="openedChatSection w-[65%] h-full bg-zinc-900 rounded border-2 flex justify-center items-center text-zinc-700">
+          <div className="logo flex flex-col items-center gap-4 mx-36">
+            <IoChatbubblesSharp className="text-8xl" />
+            <h5 className="text-2xl">ChatApp for Browser</h5>
+            <p className="text-center">Send and receive messages through all over the world using your phone, laptop and any other device which can run internet upto 4 devices.</p>
+          </div>
+        </div>
       </div>
-      
-      
     </>
   );
 };
