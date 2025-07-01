@@ -48,12 +48,34 @@ The app will start on [http://localhost:5173](http://localhost:5173) (default Vi
 - [Google Authentication](https://developers.google.com/identity)
 - [ESLint](https://eslint.org/)
 
-## Latest Commit
+## 📜 Project Commit History
 
-- **Commit:** [`e298a65`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/e298a651474d2d70f1422652459a16fd6fe192f1)
-- **Message:** 1st[Simple Form + Google(Sign up Form) created]
-- **Author:** Zain Ali
-- **Date:** 2025-06-30
+Below is a summary of the major commits made to this project, in chronological order (latest first):
+
+- **Latest Commit:**  
+  - **Commit:** [`8a9ef6d`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/8a9ef6d3e6c23812dd587921493c3b1e779f5d17)  
+  - **Message:** 4th - [ Some Fixes ]  
+  - **Author:** Zain Ali  
+  - **Date:** 2025-07-01  
+  - **Description:** Various bug fixes and minor improvements to enhance overall stability.
+
+- **Commit:** [`2000bca`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/2000bca7364f9ff50e1f34f3bb2e834b8f82ca53)  
+  - **Message:** 3rd - [ Search & Chat List created! ]  
+  - **Author:** Zain Ali  
+  - **Date:** 2025-06-30  
+  - **Description:** Implemented search functionality and added a chat list component.
+
+- **Commit:** [`9def770`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/9def77039e991731cd4b44d9790e48c85bc15373)  
+  - **Message:** 2nd - [ Dashboard Created! ]  
+  - **Author:** Zain Ali  
+  - **Date:** 2025-06-30  
+  - **Description:** Developed the main dashboard interface for the application.
+
+- **Commit:** [`e298a65`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/e298a651474d2d70f1422652459a16fd6fe192f1)  
+  - **Message:** 1st [Simple Form + Google(Sign up Form) created]  
+  - **Author:** Zain Ali  
+  - **Date:** 2025-06-30  
+  - **Description:** Initial project setup with a simple registration form and Google sign-up integration.
 
 ## Expanding the Project
 
