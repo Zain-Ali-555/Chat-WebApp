@@ -13,3 +13,17 @@
 .chatList::-webkit-scrollbar-thumb:hover {
   background: #575757; /* indigo-500 */
 }
+
+
+.clientAdminChat::-webkit-scrollbar {
+  width: 8px;
+  background: transparent; /* zinc-800 */
+  border-radius: 8px;
+}
+.clientAdminChat::-webkit-scrollbar-thumb {
+  background: #666565; /* indigo-600 */
+  border-radius: 8px;
+}
+.clientAdminChat::-webkit-scrollbar-thumb:hover {
+  background: #575757; /* indigo-500 */
+}
