@@ -27,3 +27,10 @@
 .clientAdminChat::-webkit-scrollbar-thumb:hover {
   background: #575757; /* indigo-500 */
 }
+
+.selectedIcon{
+  border-left: 2px; 
+  border:2px solid indigo ; 
+  background-color: #575757;
+  /* bg-zinc-800 */
+}
