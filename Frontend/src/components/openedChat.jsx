@@ -7,7 +7,11 @@ const OpenedChat = () => {
     console.log("Working!");
     let value = inputRef.current.value;
     let newDiv = document.createElement("div");
+<<<<<<< HEAD
     newDiv.className =
+=======
+    newDiv.classList.add =
+>>>>>>> 82147525237a5209509d6f1b971949ca16bd2ba9
       "message2 max-w-1/2 self-end bg-green-700 text-white py-1 px-2 rounded-md";
     newDiv.innerHTML = `<h5>${value}</h5>`;
 
