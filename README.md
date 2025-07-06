@@ -53,6 +53,13 @@ The app will start on [http://localhost:5173](http://localhost:5173) (default Vi
 Below is a summary of the major commits made to this project, in chronological order (latest first):
 
 - **Latest Commit:**  
+  - **Commit:** [`fb0f3e7`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/fb0f3e756032503b34cee2ceb80cf8dafb99c5b9)  
+  - **Message:** Updated README.md and Some Fixes and Folder Structer  
+  - **Author:** Zain Ali  
+  - **Date:** 2025-07-05  
+  - **Description:** Updated the README, applied some fixes, and improved folder structure.
+
+- **Commit:**  
   - **Commit:** [`8a9ef6d`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/8a9ef6d3e6c23812dd587921493c3b1e779f5d17)  
   - **Message:** 4th - [ Some Fixes ]  
   - **Author:** Zain Ali  
