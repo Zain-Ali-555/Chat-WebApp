@@ -2,10 +2,15 @@ import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
 import { TbCirclePlus2 } from "react-icons/tb";
+import { CiLogout } from "react-icons/ci";
 import { useState } from "react";
 
 const Sidebar = (Props) => {
   const [Styling, setStyling] = useState("chat");
+
+  let logoutHandler = () => {
+    if (Props.onLogout) Props.onLogout();
+  };
 
   return (
     <>
@@ -66,7 +71,17 @@ const Sidebar = (Props) => {
             } ProfileIcon cursor-pointer p-2 rounded text-center hover:bg-zinc-800`}
           >
             {/* Profile */}
-            <img className="w-8 h-8 border-1 border-zinc-700 bg- rounded-full object-cover" src={Props.imageUrl} alt="" />
+            <img
+              className="w-8 h-8 border-1 border-zinc-700 bg- rounded-full object-cover"
+              src={Props.imageUrl}
+              alt=""
+            />
+          </h5>
+          <h5
+            onClick={logoutHandler}
+            className="LogoutIcon bg-red-600 cursor-pointer p-2 rounded text-center hover:bg-red-700"
+          >
+            <CiLogout className="text-2xl text-center" />
           </h5>
         </div>
       </div>

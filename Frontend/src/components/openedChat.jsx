@@ -14,7 +14,7 @@ const OpenedChat = () => {
     console.log("Not working!");
   };
   return (
-    <>
+    <>  
       <div className="openedPersonChat w-full flex flex-col  overflow-hidden ">
         <div className="openedTop w-full h-[10vh] p-5 bg-zinc-600 flex items-center gap-5 cursor-pointer hover:bg-zinc-600/90">
           <img
