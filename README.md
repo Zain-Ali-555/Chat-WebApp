@@ -52,7 +52,21 @@ The app will start on [http://localhost:5173](http://localhost:5173) (default Vi
 
 Below is a summary of the major commits made to this project, in chronological order (latest first):
 
-- **Latest Commit:**  
+## Latest Commits
+
+- **Message:** Add CORS middleware to enable cross-origin requests  
+  **Author:** Zain Ali  
+  **Date:** 2025-07-09 17:45:20 UTC  
+  **Commit:** [9df4b3d](https://github.com/Zain-Ali-555/Chat-WebApp/commit/9df4b3d210c642faa4f8f44dbe9ecb11201ea281)
+
+- **Message:** 9th - [ Login & Logout Process completed and worked successfully! ]  
+  **Author:** Zain Ali  
+  **Date:** 2025-07-09 17:37:27 UTC  
+  **Commit:** [dbfbc6b](https://github.com/Zain-Ali-555/Chat-WebApp/commit/dbfbc6b0f91604cc354b8c246346fc703db0e753)
+
+[See more commits](https://github.com/Zain-Ali-555/Chat-WebApp/commits?per_page=2)
+
+- **Commit:**  
   - **Commit:** [`fb0f3e7`](https://github.com/Zain-Ali-555/Chat-WebApp/commit/fb0f3e756032503b34cee2ceb80cf8dafb99c5b9)  
   - **Message:** Updated README.md and Some Fixes and Folder Structer  
   - **Author:** Zain Ali  
