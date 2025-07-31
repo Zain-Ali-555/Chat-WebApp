@@ -11,6 +11,8 @@ djangorestframework-simplejwt = "*"
 djoser = "*"
 social-auth-app-django = "*"
 django-cors-headers = "*"
+djangorestframework = "*"
+channels-redis = "*"
 
 [dev-packages]
 

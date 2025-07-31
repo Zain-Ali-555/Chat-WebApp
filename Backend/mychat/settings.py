@@ -37,17 +37,18 @@ ALLOWED_HOSTS = [ipv4_address, '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
     'djoser',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'mychat.urls'
@@ -132,6 +134,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Set Channels as the default ASGI application
+ASGI_APPLICATION = 'mychat.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
@@ -174,10 +188,15 @@ SIMPLE_JWT = {
 
 
 DJOSRE = {
+    'SERIALIZERS': {
+            'user_create': 'myapp.serializers.CustomUserCreateSerializer',
+            'user': 'myapp.serializers.CustomUserSerializer',
+            'current_user': 'myapp.serializers.CustomUserSerializer',
+    },
     'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',
     'USERNAME_RESET_CONFIRM_URL': 'username-reset/{uid}/{token}',
-    'SEND_ACTIVATION_EMAIL': False,
-    'SEND_CONFIRMATION_EMAIL': False,
+    'SEND_ACTIVATION_EMAIL': True,
+    'SEND_CONFIRMATION_EMAIL': True,
     'SET_PASSWORD_RETYPE': True,
     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
     'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
@@ -190,4 +209,5 @@ DJOSRE = {
     #'LOGOUT_ON_PASSWORD_CHANGE': True, # Logout only works with token based authentication.
     'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': False, # Please note that setting this to True will expose information whether an email is registered in the system.
     'TOKEN_MODEL': None,
+    'USER_ID_FIELD': 'email'
 }
