@@ -7,18 +7,14 @@ const OpenedChat = () => {
     console.log("Working!");
     let value = inputRef.current.value;
     let newDiv = document.createElement("div");
-<<<<<<< HEAD
-    newDiv.className =
-=======
-    newDiv.classList.add =
->>>>>>> 82147525237a5209509d6f1b971949ca16bd2ba9
+    newDiv.className = newDiv.classList.add =
       "message2 max-w-1/2 self-end bg-green-700 text-white py-1 px-2 rounded-md";
     newDiv.innerHTML = `<h5>${value}</h5>`;
 
     console.log("Not working!");
   };
   return (
-    <>
+    <>  
       <div className="openedPersonChat w-full flex flex-col  overflow-hidden ">
         <div className="openedTop w-full h-[10vh] p-5 bg-zinc-600 flex items-center gap-5 cursor-pointer hover:bg-zinc-600/90">
           <img
