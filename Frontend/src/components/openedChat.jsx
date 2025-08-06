@@ -1,20 +1,18 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { IoSend } from "react-icons/io5";
 const OpenedChat = () => {
-  // let input = document.querySelector(".SendIcon");
-  const inputRef = useRef();
-  let valueGetHandler = () => {
-    console.log("Working!");
-    let value = inputRef.current.value;
-    let newDiv = document.createElement("div");
-    newDiv.className = newDiv.classList.add =
-      "message2 max-w-1/2 self-end bg-green-700 text-white py-1 px-2 rounded-md";
-    newDiv.innerHTML = `<h5>${value}</h5>`;
+  const [message, setMessage] = useState("");
 
-    console.log("Not working!");
+  const [messagesList, setMessagesList] = useState([]);
+
+  let valueGetHandler = () => {
+    let newMessage = message.trim();
+    if (newMessage === "") return;
+    setMessagesList([...messagesList, newMessage]);
+    setMessage("");
   };
   return (
-    <>  
+    <>
       <div className="openedPersonChat w-full flex flex-col  overflow-hidden ">
         <div className="openedTop w-full h-[10vh] p-5 bg-zinc-600 flex items-center gap-5 cursor-pointer hover:bg-zinc-600/90">
           <img
@@ -25,14 +23,45 @@ const OpenedChat = () => {
           <h5 className="text-2xl text-white">Waseem Shazad</h5>
         </div>
         <div className="openedMiddle w-full h-[75vh] flex flex-col gap-2 p-2">
-          <div className="clientAdminChat overflow-y-auto w-full h-full flex flex-col gap-5 p-5"></div>
+          <div className="clientAdminChat overflow-y-auto w-full h-full p-5">
+            {/* Receiving  Message */}
+            {/* <div className="sender_he flex flex-col gap-2 w-full border-white mb-2">
+              <h5 className="bg-zinc-700 w-fit py-1 px-2 rounded text-white">
+                Hi, there my name is Zain Ali. What's up?
+              </h5>
+            </div> */}
+            {/* Sending Message */}
+            {messagesList.map((dets, index) => {
+              if (dets === "") {
+                alert("You can't send empty messages.");
+                return;
+              }
+              return (
+                <div
+                  key={index}
+                  className="sender_we flex flex-col items-end   gap-2 w-full border-green-600 mb-2"
+                >
+                  <h5 className="bg-green-600 w-fit py-1 px-2 rounded text-white">
+                    {dets}
+                  </h5>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="openedBottom w-full h-[10vh] p-5 border-zinc-800 border-t-2 flex justify-center items-center gap-2">
           <input
-            ref={inputRef}
+            onInput={(e) => {
+              setMessage(e.target.value);
+              // console.log(e.target.value);
+            }}
             className="w-full p-2 rounded text-white outline-none "
+            onKeyDown={(e) => {
+              if (e.key === "Enter") valueGetHandler();
+            }}
             type="text"
             placeholder="Enter your message..."
+            value={message}
           />
           <IoSend
             onClick={valueGetHandler}

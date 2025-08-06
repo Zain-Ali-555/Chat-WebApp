@@ -10,7 +10,7 @@ import Login_And_Signup from "./components/Login_And_Signup";
 import { useState } from "react";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const loginHandler = () => setIsLoggedIn(true);
 
